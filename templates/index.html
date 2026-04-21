@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SysWatch</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <span class="logo">⬡ SysWatch</span>
+      <span class="live-badge">● LIVE</span>
+    </div>
+    <div class="header-right">
+      <span id="hostname" class="dim">—</span>
+      <span class="sep">·</span>
+      <span id="os-info" class="dim">—</span>
+      <span class="sep">·</span>
+      <span>Uptime: <span id="uptime" class="accent">—</span></span>
+      <span class="sep">·</span>
+      <span id="clock" class="dim">—</span>
+    </div>
+  </header>
+  <main>
+    <section class="row gauges">
+      <div class="card gauge-card">
+        <div class="card-title">CPU Usage</div>
+        <div class="gauge-wrap">
+          <canvas id="cpu-gauge" width="160" height="160"></canvas>
+          <div class="gauge-label"><span id="cpu-val">0</span><span class="unit">%</span></div>
+        </div>
+        <div class="gauge-meta"><span id="cpu-freq">— MHz</span><span id="cpu-cores">—</span></div>
+      </div>
+      <div class="card gauge-card">
+        <div class="card-title">Memory</div>
+        <div class="gauge-wrap">
+          <canvas id="mem-gauge" width="160" height="160"></canvas>
+          <div class="gauge-label"><span id="mem-val">0</span><span class="unit">%</span></div>
+        </div>
+        <div class="gauge-meta"><span id="mem-used">—</span><span id="mem-total">—</span></div>
+      </div>
+      <div class="card gauge-card">
+        <div class="card-title">Swap</div>
+        <div class="gauge-wrap">
+          <canvas id="swap-gauge" width="160" height="160"></canvas>
+          <div class="gauge-label"><span id="swap-val">0</span><span class="unit">%</span></div>
+        </div>
+        <div class="gauge-meta"><span id="swap-used">—</span><span id="swap-total">—</span></div>
+      </div>
+      <div class="card stat-card">
+        <div class="card-title">System Info</div>
+        <div class="stat-list">
+          <div class="stat-row"><span class="sl">Processor</span><span class="sv" id="si-proc">—</span></div>
+          <div class="stat-row"><span class="sl">Cores / Threads</span><span class="sv" id="si-cores">—</span></div>
+          <div class="stat-row"><span class="sl">Architecture</span><span class="sv" id="si-arch">—</span></div>
+          <div class="stat-row"><span class="sl">Boot Time</span><span class="sv" id="si-boot">—</span></div>
+          <div class="stat-row"><span class="sl">Python</span><span class="sv" id="si-python">—</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="card wide">
+        <div class="card-title">CPU History <span class="dim" style="font-weight:400;font-size:12px">— last 60 seconds</span></div>
+        <canvas id="cpu-chart" height="80"></canvas>
+      </div>
+    </section>
+    <section class="row three-col">
+      <div class="card">
+        <div class="card-title">Per-Core CPU</div>
+        <div id="per-core"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Network I/O</div>
+        <div class="stat-list">
+          <div class="stat-row"><span class="sl">Bytes Sent</span><span class="sv accent" id="net-sent">—</span></div>
+          <div class="stat-row"><span class="sl">Bytes Received</span><span class="sv accent" id="net-recv">—</span></div>
+          <div class="stat-row"><span class="sl">Packets Sent</span><span class="sv" id="net-psent">—</span></div>
+          <div class="stat-row"><span class="sl">Packets Recv</span><span class="sv" id="net-precv">—</span></div>
+        </div>
+        <div class="card-title" style="margin-top:1rem">Interfaces</div>
+        <div id="net-interfaces"></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Disk Usage</div>
+        <div id="disk-list"></div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="card wide">
+        <div class="card-title">Top Processes</div>
+        <table class="proc-table">
+          <thead><tr><th>PID</th><th>Name</th><th>CPU %</th><th>MEM %</th><th>Status</th></tr></thead>
+          <tbody id="proc-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>SysWatch — Built by <a href="https://github.com/MelodicSam" target="_blank">MelodicSam</a></span>
+    <span>Refreshing every 2s · <span id="last-update" class="dim">—</span></span>
+  </footer>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
