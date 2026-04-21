@@ -60,3 +60,17 @@ All displayed in a **clean, modern, blue-themed dashboard UI**.
 ---
 
 ## 📂 Project Structure
+
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/MelodicSam/Syswatch.git
+cd Syswatch
+pip install flask psutil
+python app.py
+http://localhost:5000
