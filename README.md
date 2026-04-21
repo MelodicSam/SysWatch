@@ -15,16 +15,16 @@
 
 ## 🌌 Overview
 
-SysWatch is a real-time system monitoring web application that provides insights into:
+**SysWatch** is a real-time system monitoring web application that provides deep insights into:
 
-* CPU Usage (Live + Per Core)
-* Memory & Swap Monitoring
-* Disk Utilization
-* Network Activity
-* Running Processes
-* System Information
+- CPU Usage (Live + Per Core)
+- Memory & Swap Monitoring
+- Disk Utilization
+- Network Activity
+- Running Processes
+- System Information
 
-All displayed in a clean, modern, blue-themed dashboard UI.
+All displayed in a **clean, modern, blue-themed dashboard UI**.
 
 ---
 
@@ -38,94 +38,25 @@ All displayed in a clean, modern, blue-themed dashboard UI.
 
 ## ⚡ Features
 
-* Real-time CPU monitoring with graph
-* Per-core CPU usage visualization
-* Memory & Swap tracking
-* Disk usage bars with color indicators
-* Network I/O statistics
-* Top processes monitoring
-* Clean dark UI with neon-blue accents
+🔹 Real-time CPU monitoring with graph  
+🔹 Per-core CPU usage visualization  
+🔹 Memory & Swap tracking  
+🔹 Disk usage bars with color indicators  
+🔹 Network I/O statistics  
+🔹 Top processes monitoring  
+🔹 Clean dark UI with neon-blue accents  
 
 ---
 
 ## 🧠 Tech Stack
 
-Backend: Python, Flask, psutil
-Frontend: HTML, CSS, JavaScript
-Visualization: Canvas API
-Styling: Custom CSS (Dark + Neon Blue UI)
+| Layer      | Technology |
+|------------|-----------|
+| Backend    | Python, Flask, psutil |
+| Frontend   | HTML, CSS, JavaScript |
+| Visualization | Canvas API |
+| Styling    | Custom CSS (Dark + Neon Blue UI) |
 
 ---
 
 ## 📂 Project Structure
-
-Syswatch/
-│
-├── app.py
-├── templates/
-│   └── index.html
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-
----
-
-## ⚙️ Installation & Setup
-
-1. Clone the repository
-
-git clone https://github.com/MelodicSam/Syswatch.git
-cd Syswatch
-
----
-
-2. Install dependencies
-
-pip install flask psutil
-
----
-
-3. Run the app
-
-python app.py
-
----
-
-4. Open in browser
-
-http://localhost:5000
-
----
-
-## 🔥 Future Improvements
-
-* Docker support
-* Remote server monitoring
-* Alerts (Discord / Email / Telegram)
-* Authentication system
-* Multi-node monitoring
-
----
-
-## 👨‍💻 Author
-
-Swayam Patel (MelodicSam)
-Kingston, Canada
-DevOps | Cybersecurity | System Design
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-* Star the repo
-* Share it
-* Fork it
-
----
-
-Built with passion for systems & performance
